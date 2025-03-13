@@ -16,12 +16,9 @@ Including another URLconf
 """
 
 from django.urls import path
-from first.views import FirstView, SecondView
-from users.views import UserListCreateView, UserRetrieveUpdateDestroyView
+from pizza.views import PizzaListCreateView, PizzaRetrieveUpdateDestroyView
 
 urlpatterns = [
-    path('first', FirstView.as_view()),
-    path('second/<int:age>/<str:name>/<slug:asd>', SecondView.as_view()),
-    path('users', UserListCreateView.as_view()),
-    path('users/<int:pk>', UserRetrieveUpdateDestroyView.as_view()),
+    path('pizza', PizzaListCreateView.as_view()),
+    path('pizza/<int:pk>', PizzaRetrieveUpdateDestroyView.as_view()),
 ]
